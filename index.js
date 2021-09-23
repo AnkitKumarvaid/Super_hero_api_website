@@ -7,10 +7,10 @@ document.getElementById('getApi').addEventListener('click', getApi);
 
 function getApi() {
     var heroName = document.getElementById('heroName').value;
-    // console.log(heroName);
+
 
     var url = token + heroName;
-    // console.log(url);
+
 
     fetch(url)
         .then((res) => res.json())
@@ -33,16 +33,3 @@ function getApi() {
         }).catch((err) => console.log(err))
      }
 
-// Handling details, add favourite actions
-document.addEventListener('click', (event) => {
-    // Details button
-    if(event.target.id == 'heroDetails'){
-        var id = event.target.parentNode.id;
-        window.open('./hero.html'+'?id='+id, "_self");
-        // console.log(id);
-    }
-});
-
-
-
-// Hero details
